@@ -1,0 +1,23 @@
+commit cf7c909ba2da394f475356b334f54a96d232093b
+Author: Alejandro <alaura@3psi.com.pe>
+Date:   Thu Jan 7 11:48:30 2016 -0500
+
+    Creamos el archivo Origami.txt :p
+
+commit dd5f1bb7200379d0b8eafdb9d35a407a97b67cf7
+Author: Alejandro <alaura@3psi.com.pe>
+Date:   Thu Jan 7 11:43:46 2016 -0500
+
+    Agregamos un nombre al archivo el mio xD
+
+commit 808e31350c6af09ef7ec4288930aa3c3242faf73
+Author: Alejandro <alaura@3psi.com.pe>
+Date:   Thu Jan 7 10:53:38 2016 -0500
+
+    Agregamos el nombre de Sebas a Personas.txt
+
+commit 245c773b91a94f136ab59063cb4b3f6978e92c9c
+Author: Alejandro <alaura@3psi.com.pe>
+Date:   Thu Jan 7 10:42:02 2016 -0500
+
+    primer commit
