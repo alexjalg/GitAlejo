@@ -1,0 +1,57 @@
+git fetch
+git merge
+
+creamos una organizacion
+podemos transferir repositorios a otro usuario o atra organizacion
+pwd
+omar clona el proyecto
+git clone nombre_de_repositorio
+git branch -a --para mostrar las ramas ocultas
+git fetch origin -- bajar los cambios
+git merge origin/master --unir los cambios
+git push origin master --subir los cambios
+
+iniciamos demo cuando solo un usuario hace un cambio
+omar subira los cambios
+  git add -A
+  git commit -m "Omar actualiza el proyecto"
+  git push origin master
+fili removera el repositoria ya que estaba concentadose al antiguo repositorio
+  git remote -v
+  git remote remove origin
+  git remote -v
+  ahora nos conectaremos al nuevo repositorio
+  git remote add origin nombre_de_repositorio
+  git remote -v  ---para verificar
+  git fetch origin ---con esto obtenemos los cambios y estaran en la rama oculta
+  git merge origin/master  --pasa los cambios de la rama oculta a la rama actual
+
+ahora un demo de cuando ambos usuarios hacen cambios en el proyecto
+omar subira los cambios
+---omar hace esto
+  git add -A
+  git commit -m "Omar modifica el titulo"
+---fili hace eso otro
+  git add -A
+  git commit -m "Fili modifica el titulo"
+--el ultimo que suba los cambios tendra mas problemas
+---omar
+  git push origin master --- omar sube los cambios al servidor
+--fili
+  git push origin master ----saldra un error porque fili no tiene su proyecto actualizado con los cambios que subio omar, debemos najar los cambios
+  git fetch origin --- bajamos los cambios a la rama oculta
+  git merge origin/master ---se mostrara un mensaje de conflicto , manual-merge!!!! tenemos que arreglar el conflicto
+  <<<<<<<< HEAD
+    aqui esta el ultimo commit
+  ===========
+    estos son los cambios que hiso omar
+  >>>>>>>> origin/master
+  debemos tomar la desicion y modificar el fuente y luego ,
+    git status
+    git add -A
+    git commit -m "se arreglaron los conflictos"
+    git push origin master ---subimos los cambios a git
+---omar bajara los nuevos cambios
+  git fetch origin
+  git merge origin/master ---pasa los cambios de la rama oculta a la rama actual
+  git log ---se vera la correction
